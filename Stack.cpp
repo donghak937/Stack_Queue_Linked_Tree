@@ -5,7 +5,6 @@ Stack::Stack(int s){
     p = new int[s];
     top = 0;
 }
-
 void Stack::push(int a){
     if (isFull()){
         cout << "Stack is full!" << endl;
