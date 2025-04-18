@@ -18,6 +18,6 @@ public:
     bool isEmpty();
     void printAll();
     void reverseQueue();
-    int topNum();
+    int highestNum();
     int countNum();
 };

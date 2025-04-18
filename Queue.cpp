@@ -23,7 +23,7 @@ int Queue::pop(){
     int tmp;
     if (isEmpty()){
         cout << "Queue is Empty!" << endl;
-        return;
+        return 0;
     }
 
     tmp = p[front];
@@ -69,16 +69,16 @@ void Queue::reverseQueue(){
 int Queue::highestNum(){
     if (isEmpty()){
         cout << "Queue is Empty!" << endl;
-        return;
+        return 0;
     }
 
     int i = front;
     int max;
     while (i != rear){
-        
+        if (p[i] > max) max = p[i];
         i = (i + 1) % size;
     }
-
+    return max;
 }
 int Queue::countNum(){
     int i = front;

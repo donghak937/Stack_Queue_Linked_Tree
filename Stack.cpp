@@ -6,20 +6,11 @@ Stack::Stack(int s){
     top = 0;
 }
 void Stack::push(int a){
-    if (isFull()){
-        cout << "Stack is full!" << endl;
-        return;
-    } 
     p[top] = a;
     top++;
 }
 
 int Stack::pop(){
-    if (isEmpty()){
-        cout << "Stack is Empty!" << endl;
-        return -1;
-    }
-
     top--;
     return p[top];
 }
@@ -49,10 +40,7 @@ void Stack::reverseStack(){
     delete d;
 }
 int Stack::topNum(){
-    if(isEmpty()){
-        cout << "Stack is Empty!" << endl;
-        return -1;
-    }
+
     return p[top - 1];
 
 }
