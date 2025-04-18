@@ -33,20 +33,32 @@ bool Stack::isEmpty(){
 }
 void Stack::printAll(){
     for(int i = 0; i < top; i++){
-        cout << i+1 << " : " << p[top] << endl;
+        cout << i+1 << " : " << p[i] << endl;
     }
 }
 void Stack::reverseStack(){
     int* d = new int[size];
-    for(int i = 0; i < top; i++){
+    int tmp = top;
+
+    for(int i = 0; i < tmp; i++){
         d[i] = pop();
     }
 
-    for(int i = 0; i < top; i++){
+    for(int i = 0; i < tmp; i++){
         push(d[i]);
     }
     delete d;
 }
+int Stack::topNum(){
+    if(isEmpty()){
+        cout << "Stack is Empty!" << endl;
+        return -1;
+    }
+    return p[top - 1];
 
+}
+int Stack::countNum(){
+    return top - 1;
+}
 
 
