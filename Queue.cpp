@@ -11,20 +11,13 @@ Queue::Queue(int s){
 }
 
 void Queue::push(int a){
-    if (isFull()){
-        cout << "Queue is full!" << endl;
-        return;
-    }
+
     p[rear] = a;
     rear = (rear+1) % size;
     return;
 }
 int Queue::pop(){
     int tmp;
-    if (isEmpty()){
-        cout << "Queue is Empty!" << endl;
-        return 0;
-    }
 
     tmp = p[front];
     front = (front+1) % size;
@@ -37,40 +30,36 @@ bool Queue::isEmpty(){
     return rear == front ? true : false;
 }
 void Queue::printAll(){
-    if (isEmpty()){
-        cout << "Queue is Empty!" << endl;
-        return;
-    }
+
+    int count = 1;
     int i = front;
     while (i != rear){
-        cout << i+1 << " : " << p[i] << endl;
+        cout << count << " : " << p[i] << endl;
         i = (i + 1) % size;
+        count++;
     }
 }
 void Queue::reverseQueue(){
-    if (isEmpty()){
-        cout << "Queue is Empty!" << endl;
-        return;
-    }
 
     int i = front;
-    int* b = new int[(rear + 1) % size];
+    int counts = countNum();
+    int* b = new int[counts];
     int tmp = rear;
+
+
     while (i != tmp){
         b[i] = pop();
+        
         i = (i + 1) % size;
+        
     }
-    while (i != tmp){
-        p[i] = b[i];
-        i = (i + 1) % size;
+    for(int k = counts; k > 0; k--){
+        cout << b[k-1] << endl;
+        push(b[k-1]);
     }
     delete b;
 }
 int Queue::highestNum(){
-    if (isEmpty()){
-        cout << "Queue is Empty!" << endl;
-        return 0;
-    }
 
     int i = front;
     int max;
@@ -84,7 +73,6 @@ int Queue::countNum(){
     int i = front;
     int count = 0;
     while (i != rear){
-        cout << i+1 << " : " << p[i] << endl;
         i = (i + 1) % size;
         count++;
     }

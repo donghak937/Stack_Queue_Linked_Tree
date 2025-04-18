@@ -77,7 +77,7 @@ int main() {
             
             cin >> size;
             cin.ignore();
-            Queue myQueue(size);
+            Queue myQueue(size+1);
 
             while (true){
                 cout << "push | pop | print | high | reverse | count | quit >> ";
@@ -120,6 +120,9 @@ int main() {
                     cout << "input invalid PLZ try again" << endl;
                 }
             }
+        }
+        else if (input == "l"){
+            
         }
         else if (input == "ex"){
             cout << "program ended bye!";
