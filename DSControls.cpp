@@ -1,5 +1,6 @@
 #include "stack.h"
 #include "Queue.h"
+#include "LinkedList.h"
 #include <iostream>
 #include <string>
 
@@ -10,6 +11,7 @@ int main() {
     string input("");
     int numInput;
     int size;
+    int index;
 
     while (true){
 
@@ -122,7 +124,63 @@ int main() {
             }
         }
         else if (input == "l"){
-            
+            cout << "You choose Linked List" << endl;
+
+            LinkedList myLinkedList;
+            node temp;
+
+            while (true){
+                cout << "head_Add | tail_Add | del_Head | del_Tail | insert | count | del_at | search | quit >> ";
+                cin >> input;
+
+                if (input == "head_Add"){
+                    cin >> numInput;
+                    temp.setData(numInput);
+                    myLinkedList.addToHead(temp);
+                    cout << numInput << " is Added to Head" << endl;
+                }
+                else if (input == "tail_Add"){
+                    cin >> numInput;
+                    temp.setData(numInput);
+                    myLinkedList.addToTail(temp);
+                    cout << numInput << " is Added to Tail" << endl;
+                }
+                else if (input == "del_Head"){
+                    temp = myLinkedList.deleteHead();
+                    cout << temp.num << " is Deleted" << endl;
+                }
+                else if (input == "del_Tail"){
+                    temp = myLinkedList.deleteTail();
+                    cout << temp.num << " is Deleted" << endl;
+                }
+                else if (input == "insert"){
+                    cin >> numInput >> index;
+                    temp.setData(numInput);
+                    myLinkedList.insertAt(index, temp);
+                    cout << numInput << " is Added to " << index << endl;
+                }
+                else if (input == "del_at"){
+                    cin >> index;
+                    temp = myLinkedList.deleteAt(index);
+                    cout << temp.num << " is Deleted" << endl;
+                }
+                else if (input == "count"){
+                    cout << myLinkedList.countNode() << "nodes are in it" << endl; 
+                }
+                else if (input == "search"){
+                    cin >> index;
+                    temp = myLinkedList.searchNode(index);
+                    cout << temp.num << "was at " << index << endl; 
+                }
+
+                else if (input == "quit"){
+                    cout << "Linked List quit" << endl;
+                    break;
+                }
+                else{
+                    cout << "input invalid PLZ try again" << endl;
+                }
+            }
         }
         else if (input == "ex"){
             cout << "program ended bye!";
