@@ -130,7 +130,7 @@ int main() {
             node temp;
 
             while (true){
-                cout << "head_Add | tail_Add | del_Head | del_Tail | insert | count | del_at | search | quit >> ";
+                cout << "head_Add | tail_Add | del_Head | del_Tail | insert | count | del_at | search | print | quit >> ";
                 cin >> input;
 
                 if (input == "head_Add"){
@@ -147,30 +147,33 @@ int main() {
                 }
                 else if (input == "del_Head"){
                     temp = myLinkedList.deleteHead();
-                    cout << temp.num << " is Deleted" << endl;
+                    
                 }
                 else if (input == "del_Tail"){
                     temp = myLinkedList.deleteTail();
-                    cout << temp.num << " is Deleted" << endl;
+                    
                 }
                 else if (input == "insert"){
                     cin >> numInput >> index;
                     temp.setData(numInput);
                     myLinkedList.insertAt(index, temp);
-                    cout << numInput << " is Added to " << index << endl;
+                    
                 }
                 else if (input == "del_at"){
                     cin >> index;
                     temp = myLinkedList.deleteAt(index);
-                    cout << temp.num << " is Deleted" << endl;
+                    
                 }
                 else if (input == "count"){
-                    cout << myLinkedList.countNode() << "nodes are in it" << endl; 
+                    cout << myLinkedList.countNode() << " nodes are in it" << endl; 
                 }
                 else if (input == "search"){
                     cin >> index;
                     temp = myLinkedList.searchNode(index);
-                    cout << temp.num << "was at " << index << endl; 
+                     
+                }
+                else if (input == "print"){
+                    myLinkedList.printAll();
                 }
 
                 else if (input == "quit"){

@@ -9,9 +9,7 @@ public:
     node* link;
     void setData(int a);
 };
-void node::setData(int a){
-    num = a;
-}
+
 
 class LinkedList
 {
