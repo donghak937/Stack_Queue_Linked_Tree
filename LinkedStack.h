@@ -15,6 +15,5 @@ public:
     node pop();
     void printAll();
     void reverseStack();
-    node topNum();
     int countNum();
 };
