@@ -58,5 +58,13 @@ node LinkedStack::topNum(){
 }
 
 void LinkedStack::reverseStack(){
-
+    node* p;
+    node b;
+    LinkedStack a;
+    for(p = top; p != NULL; p = p->link){
+        b = pop();
+        a.push(b);
+    }
+    this->top = a.top;
+    a.top = NULL;
 }
