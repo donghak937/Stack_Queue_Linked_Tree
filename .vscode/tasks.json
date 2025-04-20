@@ -1,0 +1,25 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build", // 💥 launch.json이 찾던 그 이름!
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "-g",              // 디버그 정보 포함
+                "DSControls.cpp",        // 너의 cpp 파일 이름
+                "LinkedStack.cpp",
+                "Queue.cpp",
+                "Stack.cpp",
+                "LinkedList.cpp",
+                "node.cpp",
+                "-o", "DSControls.exe"      // 출력 파일 이름
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": ["$gcc"]
+        }
+    ]
+}

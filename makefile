@@ -21,7 +21,7 @@ $(TARGET): $(OBJS)
 	$(CC) $(CFLAGS) -o $@ $^
 
 # Compile source files into object files
-%.o: %.cpp Stack.h Queue.h LinkedList.h
+%.o: %.cpp Stack.h Queue.h LinkedList.h LinkedStack.cpp
 	$(CC) $(CFLAGS) -c $< -o $@
 
 # Clean up build files

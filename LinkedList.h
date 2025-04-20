@@ -1,15 +1,9 @@
 #include <iostream>
+#pragma once
+#include "node.h"
+
 
 using namespace std;
-
-class node
-{
-public:
-    int num;
-    node* link;
-    void setData(int a);
-};
-
 
 class LinkedList
 {

@@ -3,10 +3,6 @@
 
 using namespace std;
 
-void node::setData(int a){
-    num = a;
-}
-
 LinkedList::LinkedList(){
     head = NULL;
     tail = NULL;
