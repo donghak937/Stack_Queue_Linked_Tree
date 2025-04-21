@@ -1,6 +1,7 @@
 #include "stack.h"
 #include "Queue.h"
 #include "LinkedList.h"
+#include "LinkedStack.h"
 #include <iostream>
 #include <string>
 
@@ -185,6 +186,45 @@ int main() {
                 }
             }
         }
+        else if (input == "ls"){
+            
+            cout << "You choose Linked stack.";
+            LinkedStack MyLinkedStack;
+            node temp;
+
+            while (true){
+                cout << "push | pop | print | reverse | count | quit >> ";
+                cin >> input;
+
+                if (input == "push"){
+                    cin >> numInput;
+                    temp.setData(numInput);
+                    MyLinkedStack.push(temp); 
+                }
+                else if (input == "pop"){
+                    MyLinkedStack.pop();
+                }
+                else if (input == "print"){
+                    MyLinkedStack.printAll(); 
+                }
+                else if (input == "reverse"){
+                MyLinkedStack.reverseStack(); 
+                        cout << "complete" << endl;
+                }
+                else if (input == "count"){
+                    cout << "Stack has " << MyLinkedStack.countNum() << " Numbers" << endl;
+                }
+
+                else if (input == "quit"){
+                    cout << "Linked Stack quit" << endl;
+                    break;
+                }
+                else{
+                    cout << "input invalid PLZ try again" << endl;
+                }
+            }
+        }
+
         else if (input == "ex"){
             cout << "program ended bye!";
             break;
