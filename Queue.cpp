@@ -12,16 +12,24 @@ Queue::Queue(int s){
 
 void Queue::push(int a){
 
-    p[rear] = a;
-    rear = (rear+1) % size;
+    if ( !isFull() ){
+        p[rear] = a;
+        rear = (rear+1) % size;
+        return;
+    }
     return;
+    
 }
 int Queue::pop(){
     int tmp;
 
-    tmp = p[front];
-    front = (front+1) % size;
-    return tmp;
+    if ( !isEmpty() ){
+        tmp = p[front];
+        front = (front+1) % size;
+        return tmp;
+    }
+
+    return -1;
 }
 bool Queue::isFull(){
     return (rear + 1) % size == front ? true : false;

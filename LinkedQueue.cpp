@@ -20,7 +20,15 @@ void LinkedQueue :: insert_num(node a){
 
 }
 node LinkedQueue :: delete_num(){
+    if(isEmpty()){
+        return node();
+    }
+    node temp = *front;
+    node* del = front;
 
+    front = front->link;
+    delete del;
+    return temp;
 }
 void LinkedQueue :: printAll(){
 
