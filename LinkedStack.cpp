@@ -16,7 +16,7 @@ void LinkedStack::push(node a){
 
 node LinkedStack::pop(){
     if (top == NULL){
-        cout << "ListedStack is Empty" << endl;
+        cout << "Listed Stack is Empty" << endl;
         return node();
     }
     node* tmp;
@@ -51,10 +51,6 @@ void LinkedStack::printAll(){
         if (p == top) cout << "| " << p->num << " |" << endl;
         else cout << "| " << p->num << " | -> ";
     }
-}
-
-node LinkedStack::topNum(){
-    return *top;
 }
 
 void LinkedStack::reverseStack(){

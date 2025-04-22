@@ -4,26 +4,36 @@
 using namespace std;
 
 LinkedQueue :: LinkedQueue(){
+    front = NULL;
+    rear = NULL;
+}
+void LinkedQueue :: insert_num(node a){
+    node* p = new node;
+    *p = a;
+    p->link = NULL;
+    if (isEmpty()){
+        rear = p = front;
+    }
+    rear->link = p;
+    rear = p;
+    return;
 
 }
-void insert_num(node a){
+node LinkedQueue :: delete_num(){
 
 }
-node delete_num(){
+void LinkedQueue :: printAll(){
 
 }
-void printAll(){
+node LinkedQueue :: peek(){
 
 }
-node peek(){
+void LinkedQueue :: clear(){
 
 }
-void clear(){
+bool LinkedQueue :: isEmpty(){
 
 }
-bool isEmpty(){
-
-}
-int countNum(){
+int LinkedQueue :: countNum(){
     
 }
