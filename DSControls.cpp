@@ -224,7 +224,9 @@ int main() {
                 }
             }
         }
-
+        else if (input == "lq"){
+            cout << "You choose Linked Queue.";
+        }
         else if (input == "ex"){
             cout << "program ended bye!";
             break;
