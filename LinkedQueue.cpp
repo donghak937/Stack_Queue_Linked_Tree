@@ -40,14 +40,22 @@ void LinkedQueue :: printAll(){
     cout << endl;
 }
 node LinkedQueue :: peek(){
-
+    if (front == NULL) return node();
+    return *front;
 }
 void LinkedQueue :: clear(){
-
+    while (!(isEmpty())){
+        delete_num();
+    }
 }
 bool LinkedQueue :: isEmpty(){
-
+    return front == NULL;
 }
 int LinkedQueue :: countNum(){
-    
+    node* p;
+    int count = 0;
+    for (p = front; p != NULL; p = p->link) {
+        count++;
+    }
+    return count;
 }
