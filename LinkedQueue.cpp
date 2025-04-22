@@ -31,7 +31,13 @@ node LinkedQueue :: delete_num(){
     return temp;
 }
 void LinkedQueue :: printAll(){
-
+    node* p;
+    for (p = front; p != NULL; p = p->link) {
+        cout << "| " << p->num << " |";
+        if (p->link != NULL)
+            cout << " -> ";
+    }
+    cout << endl;
 }
 node LinkedQueue :: peek(){
 
