@@ -12,6 +12,7 @@
                 "Queue.cpp",
                 "Stack.cpp",
                 "LinkedList.cpp",
+                "LinkedQueue.cpp",
                 "node.cpp",
                 "-o", "DSControls.exe"      // 출력 파일 이름
             ],

@@ -10,7 +10,7 @@ CFLAGS = -Wall -g
 TARGET = DScontrols
 
 # Source files
-SRCS = DScontrols.cpp Stack.cpp Queue.cpp LinkedList.cpp
+SRCS = DScontrols.cpp Stack.cpp Queue.cpp LinkedList.cpp LinkedQueue.cpp
 OBJS = $(SRCS:.cpp=.o)
 
 # Default target
@@ -21,7 +21,7 @@ $(TARGET): $(OBJS)
 	$(CC) $(CFLAGS) -o $@ $^
 
 # Compile source files into object files
-%.o: %.cpp Stack.h Queue.h LinkedList.h LinkedStack.cpp
+%.o: %.cpp Stack.h Queue.h LinkedList.h LinkedStack.cpp LinkedQueue.cpp
 	$(CC) $(CFLAGS) -c $< -o $@
 
 # Clean up build files
