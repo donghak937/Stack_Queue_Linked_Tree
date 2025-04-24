@@ -2,6 +2,7 @@
 #include "Queue.h"
 #include "LinkedList.h"
 #include "LinkedStack.h"
+#include "LinkedQueue.h"
 #include <iostream>
 #include <string>
 
@@ -226,6 +227,9 @@ int main() {
         }
         else if (input == "lq"){
             cout << "You choose Linked Queue.";
+
+            LinkedQueue MyLinkedQueue;
+            node temp;
         }
         else if (input == "ex"){
             cout << "program ended bye!";
