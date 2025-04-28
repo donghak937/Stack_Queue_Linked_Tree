@@ -1,5 +1,4 @@
 #include <iostream>
-#pragma once
 #include "treeNode.h"
 
 using namespace std;

@@ -4,7 +4,7 @@
 using namespace std;
 
 LinkedStack::LinkedStack(){
-    top == NULL;
+    top = NULL;
 }
 
 void LinkedStack::push(node a){

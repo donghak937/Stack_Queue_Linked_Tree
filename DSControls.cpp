@@ -228,8 +228,8 @@ int main() {
         else if (input == "lq"){
             cout << "You choose Linked Queue.";
 
-            LinkedQueue MyLinkedQueue;
-            node temp;
+            //LinkedQueue MyLinkedQueue;
+            //node temp;
         }
         else if (input == "ex"){
             cout << "program ended bye!";
