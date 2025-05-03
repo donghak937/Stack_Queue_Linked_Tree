@@ -12,7 +12,8 @@ void LinkedQueue :: insert_num(node a){
     *p = a;
     p->link = NULL;
     if (isEmpty()){
-        rear = p = front;
+        rear = front = p;
+        return;
     }
     rear->link = p;
     rear = p;
@@ -34,8 +35,7 @@ void LinkedQueue :: printAll(){
     node* p;
     for (p = front; p != NULL; p = p->link) {
         cout << "| " << p->num << " |";
-        if (p->link != NULL)
-            cout << " -> ";
+        if (p->link != NULL) cout << " -> ";
     }
     cout << endl;
 }

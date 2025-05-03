@@ -226,10 +226,41 @@ int main() {
             }
         }
         else if (input == "lq"){
-            cout << "You choose Linked Queue.";
+            cout << "You choose Linked Queue." << endl;
 
-            //LinkedQueue MyLinkedQueue;
-            //node temp;
+            LinkedQueue MyLinkedQueue;
+            node temp;
+
+            while (true){
+                cout << "insert | delete | print | bottom | count | quit >> ";
+                cin >> input;
+
+                if (input == "insert"){
+                    cin >> numInput;
+                    temp.setData(numInput);
+                    MyLinkedQueue.insert_num(temp); 
+                }
+                else if (input == "delete"){
+                    MyLinkedQueue.delete_num();
+                }
+                else if (input == "print"){
+                    MyLinkedQueue.printAll(); 
+                }
+                else if (input == "count"){
+                    cout << "Queue has " << MyLinkedQueue.countNum() << " Numbers" << endl;
+                }
+                else if (input == "bottom"){
+                    cout << "Num to out is " << MyLinkedQueue.peek().num << endl;
+                }
+
+                else if (input == "quit"){
+                    cout << "Linked Queue quit" << endl;
+                    break;
+                }
+                else{
+                    cout << "input invalid PLZ try again" << endl;
+                }
+            }
         }
         else if (input == "ex"){
             cout << "program ended bye!";

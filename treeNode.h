@@ -13,3 +13,5 @@ public:
     treeNode();
     void setData(string str, int a);
 };
+
+//트리 여기에 더 많은 것들을 구현할 예정임
